@@ -122,14 +122,34 @@ PULSE_API_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiYjVlYWQ4NWMt
 
 ---
 
-## 🚀 Deployment
+# 🚀 Deployment
 
-The application can be deployed to production using **Vercel**:
+The application can be deployed to production using **Vercel** or Docker.
+
+### Using Vercel
 
 1. Push your code to a Git repository.
 2. Connect the repository to **Vercel**.
 3. Set up the environment variables in the Vercel dashboard.
 4. Deploy and watch the magic happen!
+
+### Using Docker
+
+1. Ensure you have [Docker](https://www.docker.com/) installed on your system.
+
+2. Build the Docker image for the application:
+
+   ```bash
+   docker build -t sos-app .
+   ```
+
+3. Run the application using the Docker container:
+
+   ```bash
+   docker run -d -p 3000:3000 --name sos-app-container sos-app
+   ```
+
+4. Access the application in your browser at `http://localhost:3000`.
 
 ---
 

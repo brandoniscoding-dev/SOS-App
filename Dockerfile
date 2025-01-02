@@ -7,11 +7,9 @@ RUN npm install -g pnpm
 # Définir le répertoire de travail dans le conteneur
 WORKDIR /app
 
-# Copier le package.json et pnpm-lock.yaml dans le conteneur
+# Copier les fichiers nécessaires dans le conteneur
 COPY package.json pnpm-lock.yaml ./
-
-# Installer les dépendances avec pnpm
-RUN pnpm install --frozen-lockfile
+COPY node_modules ./node_modules
 
 # Copier tout le code source dans le conteneur
 COPY . .
