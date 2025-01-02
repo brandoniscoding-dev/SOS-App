@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Providers } from "./providers";
 import Link from "next/link";
+import localFont from 'next/font/local'
 
-const inter = Inter({ subsets: ["latin"] });
+
+const SpaceGrotesk = localFont({
+  src: [
+    { path: '/fonts/SpaceGrotesk-Bold.ttf', weight: '700', style: 'normal' },
+    { path: '/fonts/SpaceGrotesk-Light.ttf', weight: '300', style: 'normal' },
+    { path: '/fonts/SpaceGrotesk-Medium.ttf', weight: '400', style: 'normal' },
+    { path: '/fonts/SpaceGrotesk-Regular.ttf', weight: '500', style: 'normal' },
+    { path: '/fonts/SpaceGrotesk-SemiBold.ttf', weight: '600', style: 'normal' },
+  ],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "SOS- Anonymous Crime Reporting",
@@ -19,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={SpaceGrotesk.className}>
         <div className="relative min-h-screen bg-black selection:bg-sky-500/20">
           {/* Gradient Background */}
           <div className="fixed inset-0 -z-10 min-h-screen">
@@ -69,3 +79,4 @@ export default function RootLayout({
     </html>
   );
 }
+

@@ -82,14 +82,14 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone <your-repo-url>
-   cd anonymous-reporting-system
+   git clone https://github.com/brandoniscoding-dev/SOS-App.git
+   cd SOS App
    ```
 
 2. Install dependencies:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. Set up the database:
@@ -102,7 +102,7 @@ Make sure you have the following installed:
 4. Start the development server:
 
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 ---
