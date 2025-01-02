@@ -22,6 +22,19 @@ const nextConfig = {
     }
     return config;
   },
+  experimental: {
+    serverComponentsExternalPackages: ["prisma"], // Exemple si vous utilisez Prisma ou autres dépendances externes
+  },
+  redirects: async () => {
+    return [
+      {
+        source: '/api/reports',
+        destination: '/api/reports-dynamic',  // Vous pouvez ajuster la destination ici
+        permanent: false,
+      },
+    ];
+  },
+  reactStrictMode: false, // Désactive le mode strict si vous voulez éviter certaines vérifications
 };
 
 const withMDX = createMDX({
